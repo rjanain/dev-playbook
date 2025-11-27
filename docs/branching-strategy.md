@@ -85,6 +85,12 @@ Users report a critical bug in `v2.1.0` (production). You cannot wait for v2.2.0
 2.  **Fix & Verify:** Fix the bug on this branch.
 3.  **Merge:**
     -   Merge into **`main`** and tag as `v2.1.1`.
+        ```bash
+        git checkout main
+        git merge hotfix/v2.1.1
+        git tag -a v2.1.1 -m "Hotfix v2.1.1"
+        git push origin main --tags
+        ```
     -   **Crucial Step:** Merge into **`develop`** to ensure the fix is included in future releases.
     ```bash
     # After merging to main...
