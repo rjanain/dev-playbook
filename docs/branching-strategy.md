@@ -40,6 +40,22 @@ To maintain sanity, you need two permanent branches. Never commit directly to th
     -   The "integration" branch. All new features are merged here first.
     -   Contains the code for the *next* release (e.g., `v2.2.0`).
 
+## Initial Setup
+
+If you are starting from an existing repo with only a `main` branch (e.g., at `v2.1.0`), you need to establish the `develop` branch.
+
+```bash
+# Ensure you are on the latest main (v2.1.0)
+git checkout main
+git pull origin main
+
+# Create the develop branch based on main
+git checkout -b develop
+
+# Push develop to remote
+git push -u origin develop
+```
+
 ## Workflow Scenarios
 
 ### Scenario A: Building the next version (v2.2.0)
